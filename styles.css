@@ -1,0 +1,212 @@
+/* Created by Tivotal */
+
+/* Google Fonts(Poppins) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+}
+
+section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+section .profile {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+section.show .profile {
+  display: none;
+}
+
+section .profile .image {
+  height: 100px;
+  width: 100px;
+  background: #4070f4;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  padding: 2px;
+}
+
+section .profile .image img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+section .profile .name {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+
+section .profile .about {
+  font-size: 18px;
+  font-weight: 400;
+  color: #333;
+  margin-top: -6px;
+}
+
+section .profile .button {
+  display: flex;
+  align-items: center;
+  background: #4070f4;
+  padding: 12px 20px;
+  margin-top: 15px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+section .profile .button:hover {
+  background: #275df1;
+}
+
+section .profile .button i {
+  font-size: 18px;
+  color: #fff;
+  margin-right: 5px;
+}
+
+section .profile .button button {
+  background: none;
+  display: inline-block;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff;
+}
+
+section .popup-outer {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(1.2);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.2s 0s ease-in-out, transform 0.2s 0s ease-in-out;
+}
+
+section.show .popup-outer {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+
+section .popup-outer .popup-box {
+  background: #fff;
+  position: relative;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 380px;
+  width: 100%;
+}
+
+section .popup-outer .popup-box i {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #b4b4b4;
+  transition: all 0.3s ease;
+}
+
+section .popup-outer .popup-box i:hover {
+  color: #333;
+}
+
+section .popup-outer .popup-box .profile-text {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+section .popup-outer .popup-box .profile-text img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}
+
+section .popup-outer .popup-box .profile-text .text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+}
+
+section .popup-outer .popup-box .profile-text .text .name {
+  font-size: 14px;
+  color: #333;
+  font-weight: 400;
+}
+
+section .popup-outer .popup-box .profile-text .text .about {
+  font-size: 12px;
+  font-weight: 500;
+  color: #333;
+}
+
+section .popup-outer .popup-box textarea {
+  min-height: 120px;
+  width: 100%;
+  resize: none;
+  outline: none;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 10px 10px 10px 14px;
+  background: #f3f3f3;
+}
+
+section .popup-outer .popup-box .button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+section .popup-outer .popup-box .button button {
+  outline: none;
+  border: none;
+  background: #4070f4;
+  padding: 6px 12px;
+  margin-left: 10px;
+  border-radius: 4px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+section .popup-outer .popup-box .button button.cancel {
+  background: #f082ac;
+}
+
+section .popup-outer .popup-box .button button.cancel:hover {
+  background: #ec5f95;
+}
+
+section .popup-outer .popup-box .button button.send:hover {
+  background: #275df1;
+}

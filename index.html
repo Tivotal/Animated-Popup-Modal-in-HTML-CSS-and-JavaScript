@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Popup Modal Box</title>
+
+    <!--font awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!--css file-->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section>
+      <div class="profile">
+        <div class="image">
+          <img src="profile.jpg" alt="" />
+        </div>
+        <span class="name">Sophia Luna</span>
+        <span class="about">Blogger & YouTuber</span>
+        <div class="button">
+          <i class="fas fa-envelope"></i>
+          <button>Message Me</button>
+        </div>
+      </div>
+
+      <div class="popup-outer">
+        <div class="popup-box">
+          <i class="fas fa-xmark cancel"></i>
+          <div class="profile-text">
+            <img src="profile.jpg" alt="" />
+            <div class="text">
+              <span class="name">Sophia Luna</span>
+              <span class="about">Blogger & YouTuber</span>
+            </div>
+          </div>
+          <textarea placeholder="Enter your message"></textarea>
+          <div class="button">
+            <button class="cancel">Cancel</button>
+            <button class="send">Send</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>
